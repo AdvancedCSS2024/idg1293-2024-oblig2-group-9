@@ -1,8 +1,19 @@
 // USE THIS FILE TO CREATE THE LAYOUT AND SPECIFIC RULES FOR SCREENSHOTS 1 and 2
 
+@font-face {
+    font-family: 'marydale_regular';
+    src: url("../fonts/MarydaleRegular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'marydale_bold';
+    src: url("../fonts/MarydaleBold.ttf") format('truetype');
+}
+
 body {
   margin: 10px;
   background: grey;
+  font-family: 'marydale_bold', sans-serif;
 }
 
 .poster {
@@ -30,7 +41,7 @@ body {
     }
 
     &__peach {
-        transform: translateY(-153px);
+        transform: translateY(-158px);
     }
 
     &__earth {
@@ -47,7 +58,7 @@ body {
     &__top {
         background-color: #ffffff;
         font-size: .4rem;
-        padding: 0 10px;
+        padding: 0 2px;
 
         & p {
             margin: 0;
