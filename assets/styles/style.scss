@@ -1,21 +1,19 @@
-// USE THIS FILE TO CREATE THE LAYOUT AND SPECIFIC RULES FOR SCREENSHOTS 1 and 2
-
 @font-face {
     font-family: 'marydale_regular';
     src: url("../fonts/MarydaleRegular.ttf") format('truetype');
 }
-
+ 
 @font-face {
     font-family: 'marydale_bold';
     src: url("../fonts/MarydaleBold.ttf") format('truetype');
 }
-
+ 
 body {
   margin: 10px;
   background: grey;
   font-family: 'marydale_bold', sans-serif;
 }
-
+ 
 .poster {
     background: white;
     width: 500px;
@@ -24,83 +22,186 @@ body {
     position: relative;
     overflow: hidden;
 
+    &__header {
+        position: absolute;
+        left: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        font-weight: 800;
+        color: #005ba7;
+        z-index: 5;
+    }
+
+    &__header2 {
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        font-weight: 800;
+        color: #005ba7;
+        z-index: 5;
+    }
+
+    &__header-subtext {
+        position: absolute;
+        top: 82px;
+        left: 20px;
+        width: 460px;
+        z-index: 5;
+    }
+
+    &__header-subtext span {
+        display: block;
+        font-family: 'marydale_bold', sans-serif;
+        font-size: 0.7em;
+        color: black;
+        text-align: left;
+    }
+ 
     &__top {
         position: absolute;
         z-index: 3;
-      }
-
+    }
+ 
     &__blue {
         z-index: 2;
         position: relative;
     }
 
+    &__text-on-blue {
+        position: absolute;
+        top: 150px;
+        left: 20px;
+        color: white;
+        font-family: 'marydale_bold', sans-serif;
+        font-size: 0.7em;
+        z-index: 5;
+    }
+
+    &__text-on-blue span {
+        display: block;
+    }
+ 
     &__lightblue {
         z-index: 1;
         transform: translateY(-100px);
         position: relative;
     }
-
+ 
     &__peach {
         transform: translateY(-158px);
     }
-
+ 
     &__earth {
         transform: translate(-50px, -320px);
         width: 115%;
     }
+
+    &__kids {
+        position: absolute;
+        z-index: 5;
+        width: 350px;
+        left: 65px;
+        top: 320px;
+        animation: kidsJumping 1s ease-in-out infinite;
+    }
+
+    &__car {
+        position: absolute;
+        z-index: 4;
+        top: 200px;
+        left: 200px;
+        width: 100px;
+        animation: moveCar 2s ease-in-out infinite;
+    }
+
+    &__car-subtext {
+        position: absolute;
+        z-index: 5;
+        width: 190px;
+        left: 10px;
+        top: 260px;
+    }
 }
 
+// Highlights the "miljø"-part of "miljødetektiv" green.
+.highlight {
+    color: #21A35C;
+}
+ 
 .footer {
     position: absolute;
     bottom: 0;
     z-index: 4;
-
+ 
     &__top {
         background-color: #ffffff;
         font-size: .4rem;
         padding: 0 2px;
-
+ 
         & p {
             margin: 0;
-
+ 
             & a {
                 color: #000000;
             }
         }
     }
-
+ 
     &__bottom {
         background-color: #005ba7;
         display: flex;
         font-size: .4rem;
         padding: 5px 10px;
         color: #ffffff;
-
+ 
         & p {
             margin: 0 10px;
             text-align: right;
-
+ 
             & a {
                 display: block;
                 color: #ffffff;
                 text-decoration: none;
-
+ 
                 &:hover {
                     text-decoration: underline;
                 }
             }
         }
     }
-
+ 
     &__logo {
         height: 15px;
         margin-right: 10px;
     }
 }
-
+ 
 .barrier {
     height: 20px;
     width: 2px;
     background-color: #ffffff;
     border-radius: 50px;
+}
+
+// Keyframes
+
+@keyframes moveCar {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes kidsJumping {
+    0%, 100% {
+        top: 320px;
+    }
+    50% {
+        top: 310px;
+    }
 }
