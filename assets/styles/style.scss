@@ -1,9 +1,4 @@
 @font-face {
-    font-family: 'marydale_regular';
-    src: url("../fonts/MarydaleRegular.ttf") format('truetype');
-}
- 
-@font-face {
     font-family: 'marydale_bold';
     src: url("../fonts/MarydaleBold.ttf") format('truetype');
 }
@@ -14,7 +9,7 @@ body {
   font-family: 'marydale_bold', sans-serif;
 }
 
-
+// Keyframes
 // keyframes that tilt the moon
 @keyframes tiltMoon {
     0% {
@@ -25,6 +20,43 @@ body {
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+
+// Keyframes that move the car
+@keyframes moveCar {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+// Keyframes that make the kids jump
+@keyframes kidsJumping {
+    0%, 100% {
+        top: 290px;
+    }
+    50% {
+        top: 270px;
+  }
+  }
+
+  // animation keyframes that move the eyes of the earth
+@keyframes moveEyes {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    33% {
+        transform: translateX(-10px) translateY(-5px);
+    }
+    66% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
     }
 }
 
@@ -108,7 +140,7 @@ body {
     }
  
     &__earth {
-        transform: translate(-50px, -320px);
+        transform: translate(-50px, -350px);
         width: 115%;
     }
 
@@ -117,7 +149,7 @@ body {
         z-index: 5;
         width: 350px;
         left: 65px;
-        top: 320px;
+        top: 270px;
         animation: kidsJumping 1s ease-in-out infinite;
     }
 
@@ -136,6 +168,7 @@ body {
         width: 190px;
         left: 10px;
         top: 260px;
+    }
 
     &__moon {
         position: absolute;
@@ -144,6 +177,14 @@ body {
         right: 50px;
         top: 95px;
         animation: tiltMoon 5s infinite;
+    }
+
+    &__qrcode {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        bottom: 55px;
+        left: 10px;
     }
 }
 
@@ -162,6 +203,7 @@ body {
         font-size: .4rem;
         padding: 0 2px;
  
+        // modifies the p-tags inside .footer__top
         & p {
             margin: 0;
  
@@ -200,6 +242,7 @@ body {
     }
 }
  
+// Barrier used for the footer
 .barrier {
     height: 20px;
     width: 2px;
@@ -207,58 +250,20 @@ body {
     border-radius: 50px;
 }
 
-
-// Keyframes
-
-@keyframes moveCar {
-    0%, 100% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(10px);
-    }
-}
-
-@keyframes kidsJumping {
-    0%, 100% {
-        top: 320px;
-    }
-    50% {
-        top: 310px;
-  }
-  }
-  
 .stars {
     &__big {
         position: absolute;
         z-index: 5;
-        right: 25px;
-        top: 75px;
+        right: 10px;
+        top: 70px;
         transform: rotate(-20deg);
     }
     &__small {
         position: absolute;
         z-index: 5;
-        right: 10px;
+        right: 0px;
         top: 130px;
         transform: rotate(-20deg);
-    }
-}
-
-// animation keyframes that move the eyes of the earth
-@keyframes moveEyes {
-    0% {
-        transform: translateX(0) translateY(0);
-    }
-    33% {
-        transform: translateX(-10px) translateY(-5px);
-    }
-    66% {
-        transform: translateX(-20px);
-    }
-    100% {
-        transform: translateX(0) translateY(0);
     }
 }
 
@@ -273,17 +278,6 @@ body {
         bottom: 0;
         left: 110px;
         border-radius: 50%;
-
-        &>div {
-            position: absolute;
-            height: 40px;
-            width: 35px;
-            background-color: #ffffff;
-            border-radius: 50%;
-            top: 15px;
-            left: 35px;
-            animation: moveEyes 10s infinite;
-        }
     }
 
     &__right {
@@ -295,9 +289,12 @@ body {
         bottom: 0;
         left: 300px;
         border-radius: 50%;
+    }
 
-        &>div {
-            position: absolute;
+    // The earths pupils
+
+    &__pupils {
+        position: absolute;
             height: 40px;
             width: 35px;
             background-color: #ffffff;
@@ -305,6 +302,5 @@ body {
             top: 15px;
             left: 35px;
             animation: moveEyes 10s infinite;
-        }
     }
 }

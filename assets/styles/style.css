@@ -1,8 +1,4 @@
 @font-face {
-  font-family: "marydale_regular";
-  src: url("../fonts/MarydaleRegular.ttf") format("truetype");
-}
-@font-face {
   font-family: "marydale_bold";
   src: url("../fonts/MarydaleBold.ttf") format("truetype");
 }
@@ -21,6 +17,36 @@ body {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@keyframes moveCar {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+@keyframes kidsJumping {
+  0%, 100% {
+    top: 290px;
+  }
+  50% {
+    top: 270px;
+  }
+}
+@keyframes moveEyes {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(-10px) translateY(-5px);
+  }
+  66% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
   }
 }
 .poster {
@@ -93,16 +119,15 @@ body {
   transform: translateY(-158px);
 }
 .poster__earth {
-  transform: translate(-50px, -320px);
+  transform: translate(-50px, -350px);
   width: 115%;
 }
-
 .poster__kids {
   position: absolute;
   z-index: 5;
   width: 350px;
   left: 65px;
-  top: 320px;
+  top: 270px;
   animation: kidsJumping 1s ease-in-out infinite;
 }
 .poster__car {
@@ -120,10 +145,6 @@ body {
   left: 10px;
   top: 260px;
 }
-
-.highlight {
-  color: #21A35C;
-
 .poster__moon {
   position: absolute;
   z-index: 6;
@@ -131,7 +152,17 @@ body {
   right: 50px;
   top: 95px;
   animation: tiltMoon 5s infinite;
+}
+.poster__qrcode {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  bottom: 55px;
+  left: 10px;
+}
 
+.highlight {
+  color: #21A35C;
 }
 
 .footer {
@@ -181,52 +212,21 @@ body {
   border-radius: 50px;
 }
 
-
-@keyframes moveCar {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10px);
-  }
-}
-@keyframes kidsJumping {
-  0%, 100% {
-    top: 320px;
-  }
-  50% {
-    top: 310px;
-  }
-
 .stars__big {
   position: absolute;
   z-index: 5;
-  right: 25px;
-  top: 75px;
+  right: 10px;
+  top: 70px;
   transform: rotate(-20deg);
 }
 .stars__small {
   position: absolute;
   z-index: 5;
-  right: 10px;
+  right: 0px;
   top: 130px;
   transform: rotate(-20deg);
 }
 
-@keyframes moveEyes {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  33% {
-    transform: translateX(-10px) translateY(-5px);
-  }
-  66% {
-    transform: translateX(-20px);
-  }
-  100% {
-    transform: translateX(0) translateY(0);
-  }
-}
 .earthEyes__left {
   position: absolute;
   height: 120px;
@@ -236,16 +236,6 @@ body {
   bottom: 0;
   left: 110px;
   border-radius: 50%;
-}
-.earthEyes__left > div {
-  position: absolute;
-  height: 40px;
-  width: 35px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  top: 15px;
-  left: 35px;
-  animation: moveEyes 10s infinite;
 }
 .earthEyes__right {
   position: absolute;
@@ -257,7 +247,7 @@ body {
   left: 300px;
   border-radius: 50%;
 }
-.earthEyes__right > div {
+.earthEyes__pupils {
   position: absolute;
   height: 40px;
   width: 35px;
@@ -266,5 +256,4 @@ body {
   top: 15px;
   left: 35px;
   animation: moveEyes 10s infinite;
-
 }/*# sourceMappingURL=style.css.map */
