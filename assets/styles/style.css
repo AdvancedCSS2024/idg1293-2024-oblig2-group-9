@@ -123,6 +123,7 @@ body {
   transform: translate(-50px, -350px);
   width: 115%;
 }
+
 .poster__earth-text {
   position: absolute;
   z-index: 5;
@@ -174,6 +175,7 @@ body {
   line-height: 1.4;
   text-align: right;
 }
+
 .poster__kids {
   position: absolute;
   z-index: 5;
@@ -204,6 +206,14 @@ body {
   right: 50px;
   top: 95px;
   animation: tiltMoon 5s infinite;
+}
+
+.poster__qrcode {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  bottom: 55px;
+  left: 10px;
 }
 
 .highlight {
@@ -260,14 +270,14 @@ body {
 .stars__big {
   position: absolute;
   z-index: 5;
-  right: 25px;
-  top: 75px;
+  right: 10px;
+  top: 70px;
   transform: rotate(-20deg);
 }
 .stars__small {
   position: absolute;
   z-index: 5;
-  right: 10px;
+  right: 0px;
   top: 130px;
   transform: rotate(-20deg);
 }
@@ -282,16 +292,6 @@ body {
   left: 110px;
   border-radius: 50%;
 }
-.earthEyes__left > div {
-  position: absolute;
-  height: 40px;
-  width: 35px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  top: 15px;
-  left: 35px;
-  animation: moveEyes 10s infinite;
-}
 .earthEyes__right {
   position: absolute;
   height: 120px;
@@ -302,7 +302,7 @@ body {
   left: 300px;
   border-radius: 50%;
 }
-.earthEyes__right > div {
+.earthEyes__pupils {
   position: absolute;
   height: 40px;
   width: 35px;
