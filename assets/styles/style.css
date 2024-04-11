@@ -123,7 +123,6 @@ body {
   transform: translate(-50px, -350px);
   width: 115%;
 }
-
 .poster__earth-text {
   position: absolute;
   z-index: 5;
@@ -175,7 +174,6 @@ body {
   line-height: 1.4;
   text-align: right;
 }
-
 .poster__kids {
   position: absolute;
   z-index: 5;
@@ -207,7 +205,6 @@ body {
   top: 95px;
   animation: tiltMoon 5s infinite;
 }
-
 .poster__qrcode {
   position: absolute;
   height: 50px;
