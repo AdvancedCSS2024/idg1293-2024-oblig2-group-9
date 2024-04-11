@@ -23,7 +23,9 @@ body {
     }
 }
 
+
 // Keyframes that move the car
+
 @keyframes moveCar {
     0%, 100% {
         transform: translateX(0);
@@ -34,7 +36,9 @@ body {
     }
 }
 
+
 // Keyframes that make the kids jump
+
 @keyframes kidsJumping {
     0%, 100% {
         top: 290px;
@@ -123,9 +127,10 @@ body {
         font-family: 'marydale_bold', sans-serif;
         font-size: 0.7em;
         z-index: 5;
+        line-height: 1.4;
     }
 
-    &__text-on-blue span {
+    &__text-on-blue span, &__earth-text-bottom span, &__earth-text-left span, &__earth-text-right span, &__earth-text-top span, &__earth-text-right2 span {
         display: block;
     }
  
@@ -142,6 +147,63 @@ body {
     &__earth {
         transform: translate(-50px, -350px);
         width: 115%;
+    }
+
+    &__earth-text {
+        position: absolute;
+        z-index: 5;
+        color: black;
+        font-family: 'marydale_bold', sans-serif;
+        font-size: 1.5em;
+        bottom: 100px;
+        left: 170px;
+    }
+
+    &__earth-text-bottom {
+        position: absolute;
+        z-index: 5;
+        left: 230px;
+        bottom: 65px;
+        font-size: 0.5em;
+        line-height: 1.4;
+    }
+
+    &__earth-text-left {
+        position: absolute;
+        z-index: 5;
+        left: 55px;
+        bottom: 130px;
+        font-size: 0.5em;
+        line-height: 1.4;
+    }
+
+    &__earth-text-top {
+        position: absolute;
+        z-index: 5;
+        left: 210px;
+        bottom: 180px;
+        font-size: 0.5em;
+        text-align: right;
+        line-height: 1.4;
+    }
+
+    &__earth-text-right {
+        position: absolute;
+        z-index: 5;
+        bottom: 105px;
+        right: 45px;
+        font-size: 0.5em;
+        line-height: 1.4;
+    }
+
+    &__earth-text-right2 {
+        position: absolute;
+        z-index: 5;
+        bottom: 55px;
+        right: 39px;
+        font-size: 0.5em;
+        line-height: 1.4;
+        text-align: right;
     }
 
     &__kids {
@@ -169,7 +231,7 @@ body {
         left: 10px;
         top: 260px;
     }
-
+    } 
     &__moon {
         position: absolute;
         z-index: 6;
@@ -292,7 +354,6 @@ body {
     }
 
     // The earths pupils
-
     &__pupils {
         position: absolute;
             height: 40px;

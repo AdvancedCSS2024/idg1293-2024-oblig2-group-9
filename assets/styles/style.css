@@ -106,8 +106,9 @@ body {
   font-family: "marydale_bold", sans-serif;
   font-size: 0.7em;
   z-index: 5;
+  line-height: 1.4;
 }
-.poster__text-on-blue span {
+.poster__text-on-blue span, .poster__earth-text-bottom span, .poster__earth-text-left span, .poster__earth-text-right span, .poster__earth-text-top span, .poster__earth-text-right2 span {
   display: block;
 }
 .poster__lightblue {
@@ -122,6 +123,59 @@ body {
   transform: translate(-50px, -350px);
   width: 115%;
 }
+
+.poster__earth-text {
+  position: absolute;
+  z-index: 5;
+  color: black;
+  font-family: "marydale_bold", sans-serif;
+  font-size: 1.5em;
+  bottom: 100px;
+  left: 170px;
+}
+.poster__earth-text-bottom {
+  position: absolute;
+  z-index: 5;
+  left: 230px;
+  bottom: 65px;
+  font-size: 0.5em;
+  line-height: 1.4;
+}
+.poster__earth-text-left {
+  position: absolute;
+  z-index: 5;
+  left: 55px;
+  bottom: 130px;
+  font-size: 0.5em;
+  line-height: 1.4;
+}
+.poster__earth-text-top {
+  position: absolute;
+  z-index: 5;
+  left: 210px;
+  bottom: 180px;
+  font-size: 0.5em;
+  text-align: right;
+  line-height: 1.4;
+}
+.poster__earth-text-right {
+  position: absolute;
+  z-index: 5;
+  bottom: 105px;
+  right: 45px;
+  font-size: 0.5em;
+  line-height: 1.4;
+}
+.poster__earth-text-right2 {
+  position: absolute;
+  z-index: 5;
+  bottom: 55px;
+  right: 39px;
+  font-size: 0.5em;
+  line-height: 1.4;
+  text-align: right;
+}
+
 .poster__kids {
   position: absolute;
   z-index: 5;
@@ -153,6 +207,7 @@ body {
   top: 95px;
   animation: tiltMoon 5s infinite;
 }
+
 .poster__qrcode {
   position: absolute;
   height: 50px;
