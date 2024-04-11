@@ -1,9 +1,4 @@
 @font-face {
-    font-family: 'marydale_regular';
-    src: url("../fonts/MarydaleRegular.ttf") format('truetype');
-}
- 
-@font-face {
     font-family: 'marydale_bold';
     src: url("../fonts/MarydaleBold.ttf") format('truetype');
 }
@@ -25,6 +20,43 @@ body {
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+
+// Keyframes
+
+@keyframes moveCar {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes kidsJumping {
+    0%, 100% {
+        top: 290px;
+    }
+    50% {
+        top: 270px;
+  }
+  }
+
+  // animation keyframes that move the eyes of the earth
+@keyframes moveEyes {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    33% {
+        transform: translateX(-10px) translateY(-5px);
+    }
+    66% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
     }
 }
 
@@ -91,9 +123,10 @@ body {
         font-family: 'marydale_bold', sans-serif;
         font-size: 0.7em;
         z-index: 5;
+        line-height: 1.4;
     }
 
-    &__text-on-blue span {
+    &__text-on-blue span, &__earth-text-bottom span, &__earth-text-left span, &__earth-text-right span, &__earth-text-top span, &__earth-text-right2 span {
         display: block;
     }
  
@@ -108,8 +141,65 @@ body {
     }
  
     &__earth {
-        transform: translate(-50px, -320px);
+        transform: translate(-50px, -350px);
         width: 115%;
+    }
+
+    &__earth-text {
+        position: absolute;
+        z-index: 5;
+        color: black;
+        font-family: 'marydale_bold', sans-serif;
+        font-size: 1.5em;
+        bottom: 100px;
+        left: 170px;
+    }
+
+    &__earth-text-bottom {
+        position: absolute;
+        z-index: 5;
+        left: 230px;
+        bottom: 65px;
+        font-size: 0.5em;
+        line-height: 1.4;
+    }
+
+    &__earth-text-left {
+        position: absolute;
+        z-index: 5;
+        left: 55px;
+        bottom: 130px;
+        font-size: 0.5em;
+        line-height: 1.4;
+    }
+
+    &__earth-text-top {
+        position: absolute;
+        z-index: 5;
+        left: 210px;
+        bottom: 180px;
+        font-size: 0.5em;
+        text-align: right;
+        line-height: 1.4;
+    }
+
+    &__earth-text-right {
+        position: absolute;
+        z-index: 5;
+        bottom: 105px;
+        right: 45px;
+        font-size: 0.5em;
+        line-height: 1.4;
+    }
+
+    &__earth-text-right2 {
+        position: absolute;
+        z-index: 5;
+        bottom: 55px;
+        right: 39px;
+        font-size: 0.5em;
+        line-height: 1.4;
+        text-align: right;
     }
 
     &__kids {
@@ -117,7 +207,7 @@ body {
         z-index: 5;
         width: 350px;
         left: 65px;
-        top: 320px;
+        top: 270px;
         animation: kidsJumping 1s ease-in-out infinite;
     }
 
@@ -136,7 +226,7 @@ body {
         width: 190px;
         left: 10px;
         top: 260px;
-
+    } 
     &__moon {
         position: absolute;
         z-index: 6;
@@ -207,27 +297,6 @@ body {
     border-radius: 50px;
 }
 
-
-// Keyframes
-
-@keyframes moveCar {
-    0%, 100% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(10px);
-    }
-}
-
-@keyframes kidsJumping {
-    0%, 100% {
-        top: 320px;
-    }
-    50% {
-        top: 310px;
-  }
-  }
   
 .stars {
     &__big {
@@ -243,22 +312,6 @@ body {
         right: 10px;
         top: 130px;
         transform: rotate(-20deg);
-    }
-}
-
-// animation keyframes that move the eyes of the earth
-@keyframes moveEyes {
-    0% {
-        transform: translateX(0) translateY(0);
-    }
-    33% {
-        transform: translateX(-10px) translateY(-5px);
-    }
-    66% {
-        transform: translateX(-20px);
-    }
-    100% {
-        transform: translateX(0) translateY(0);
     }
 }
 
