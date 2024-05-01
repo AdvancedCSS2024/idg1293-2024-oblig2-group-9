@@ -1,0 +1,311 @@
+@font-face {
+  font-family: "marydale_bold";
+  src: url("../fonts/MarydaleBold.ttf") format("truetype");
+}
+body {
+  margin: 10px;
+  background: grey;
+  font-family: "marydale_bold", sans-serif;
+}
+
+@keyframes tiltMoon {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes moveCar {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+@keyframes kidsJumping {
+  0%, 100% {
+    top: 290px;
+  }
+  50% {
+    top: 270px;
+  }
+}
+@keyframes moveEyes {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(-10px) translateY(-5px);
+  }
+  66% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+.poster {
+  background: white;
+  width: 500px;
+  margin: 0 auto;
+  aspect-ratio: 0.71;
+  position: relative;
+  overflow: hidden;
+}
+.poster__header {
+  position: absolute;
+  left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #005ba7;
+  z-index: 5;
+}
+.poster__header2 {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #005ba7;
+  z-index: 5;
+}
+.poster__header-subtext {
+  position: absolute;
+  top: 82px;
+  left: 20px;
+  width: 460px;
+  z-index: 5;
+}
+.poster__header-subtext span {
+  display: block;
+  font-family: "marydale_bold", sans-serif;
+  font-size: 0.7em;
+  color: black;
+  text-align: left;
+}
+.poster__top {
+  position: absolute;
+  z-index: 3;
+}
+.poster__blue {
+  z-index: 2;
+  position: relative;
+}
+.poster__text-on-blue {
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  color: white;
+  font-family: "marydale_bold", sans-serif;
+  font-size: 0.7em;
+  z-index: 5;
+  line-height: 1.4;
+}
+.poster__text-on-blue span, .poster__earth-text-bottom span, .poster__earth-text-left span, .poster__earth-text-right span, .poster__earth-text-top span, .poster__earth-text-right2 span {
+  display: block;
+}
+.poster__lightblue {
+  z-index: 1;
+  transform: translateY(-100px);
+  position: relative;
+}
+.poster__peach {
+  transform: translateY(-158px);
+}
+.poster__earth {
+  transform: translate(-50px, -350px);
+  width: 115%;
+}
+.poster__earth-text {
+  position: absolute;
+  z-index: 5;
+  color: black;
+  font-family: "marydale_bold", sans-serif;
+  font-size: 1.5em;
+  bottom: 100px;
+  left: 170px;
+}
+.poster__earth-text-bottom {
+  position: absolute;
+  z-index: 5;
+  left: 230px;
+  bottom: 65px;
+  font-size: 0.5em;
+  line-height: 1.4;
+}
+.poster__earth-text-left {
+  position: absolute;
+  z-index: 5;
+  left: 55px;
+  bottom: 130px;
+  font-size: 0.5em;
+  line-height: 1.4;
+}
+.poster__earth-text-top {
+  position: absolute;
+  z-index: 5;
+  left: 210px;
+  bottom: 180px;
+  font-size: 0.5em;
+  text-align: right;
+  line-height: 1.4;
+}
+.poster__earth-text-right {
+  position: absolute;
+  z-index: 5;
+  bottom: 105px;
+  right: 45px;
+  font-size: 0.5em;
+  line-height: 1.4;
+}
+.poster__earth-text-right2 {
+  position: absolute;
+  z-index: 5;
+  bottom: 55px;
+  right: 39px;
+  font-size: 0.5em;
+  line-height: 1.4;
+  text-align: right;
+}
+.poster__kids {
+  position: absolute;
+  z-index: 5;
+  width: 350px;
+  left: 65px;
+  top: 270px;
+  animation: kidsJumping 1s ease-in-out infinite;
+}
+.poster__car {
+  position: absolute;
+  z-index: 4;
+  top: 200px;
+  left: 200px;
+  width: 100px;
+  animation: moveCar 2s ease-in-out infinite;
+}
+.poster__car-subtext {
+  position: absolute;
+  z-index: 5;
+  width: 190px;
+  left: 10px;
+  top: 260px;
+}
+.poster__moon {
+  position: absolute;
+  z-index: 6;
+  width: 120px;
+  right: 50px;
+  top: 95px;
+  animation: tiltMoon 5s infinite;
+}
+.poster__qrcode {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  bottom: 55px;
+  left: 10px;
+}
+
+.highlight {
+  color: #21A35C;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+}
+.footer__top {
+  background-color: #ffffff;
+  font-size: 0.4rem;
+  padding: 0 2px;
+}
+.footer__top p {
+  margin: 0;
+}
+.footer__top p a {
+  color: #000000;
+}
+.footer__bottom {
+  background-color: #005ba7;
+  display: flex;
+  font-size: 0.4rem;
+  padding: 5px 10px;
+  color: #ffffff;
+}
+.footer__bottom p {
+  margin: 0 10px;
+  text-align: right;
+}
+.footer__bottom p a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer__bottom p a:hover {
+  text-decoration: underline;
+}
+.footer__logo {
+  height: 15px;
+  margin-right: 10px;
+}
+
+.barrier {
+  height: 20px;
+  width: 2px;
+  background-color: #ffffff;
+  border-radius: 50px;
+}
+
+.stars__big {
+  position: absolute;
+  z-index: 5;
+  right: 10px;
+  top: 70px;
+  transform: rotate(-20deg);
+}
+.stars__small {
+  position: absolute;
+  z-index: 5;
+  right: 0px;
+  top: 130px;
+  transform: rotate(-20deg);
+}
+
+.earthEyes__left {
+  position: absolute;
+  height: 120px;
+  width: 85px;
+  background-color: #000000;
+  z-index: 4;
+  bottom: 0;
+  left: 110px;
+  border-radius: 50%;
+}
+.earthEyes__right {
+  position: absolute;
+  height: 120px;
+  width: 85px;
+  background-color: #000000;
+  z-index: 4;
+  bottom: 0;
+  left: 300px;
+  border-radius: 50%;
+}
+.earthEyes__pupils {
+  position: absolute;
+  height: 40px;
+  width: 35px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  top: 15px;
+  left: 35px;
+  animation: moveEyes 10s infinite;
+}/*# sourceMappingURL=style.css.map */
